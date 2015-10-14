@@ -1,0 +1,136 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="andrezz.cajero.MenuCajero"
+    android:orientation="vertical"
+    android:background="#ffffffff">
+
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:rowCount="3"
+        android:columnCount="2"
+        android:id="@+id/gridd"
+        android:layout_marginBottom="32dp"
+        android:background="#ffffff"
+        android:elevation="4dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/msg_user"
+            android:id="@+id/textView10" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Sin Datos"
+            android:id="@+id/tvUsuario" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/msg_ncta"
+            android:id="@+id/textView12" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Sin Datos"
+            android:id="@+id/tvCuenta" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/msg_monto"
+            android:id="@+id/textView3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Sin Datos"
+            android:id="@+id/tvSaldo" />
+    </GridLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="2dp">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight=".5"
+            android:layout_height="wrap_content"
+            android:text="@string/msg_btn_retiro"
+            android:id="@+id/btnRetiro"
+            android:background="@android:color/holo_blue_light"
+            android:textColor="#ffffffff"
+            android:onClick="abrirRetiro" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="2dp">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight=".5"
+            android:layout_height="wrap_content"
+            android:text="@string/msg_btn_transferencia"
+            android:id="@+id/btnTransf"
+            android:background="@android:color/holo_blue_light"
+            android:textColor="#ffffffff"
+            android:onClick="abrirTransferencia" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="2dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_weight=".5"
+            android:layout_height="wrap_content"
+            android:text="@string/msg_btn_consulta"
+            android:id="@+id/btnConsulta"
+            android:textColor="#ffffffff"
+            android:background="@android:color/holo_blue_light"
+            android:onClick="abrirConsulta" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="2dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_weight=".5"
+            android:layout_height="wrap_content"
+            android:text="@string/msg_btn_salir"
+            android:id="@+id/btnSalir"
+            android:background="@android:color/holo_blue_light"
+            android:textColor="#ffffffff"
+            android:onClick="abrirLogin" />
+    </LinearLayout>
+</LinearLayout>

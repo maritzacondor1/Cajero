@@ -1,0 +1,84 @@
+<html>
+<head>
+<title>MainActivity.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: rgb(0,0,0); font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { }
+.s2 { color: rgb(0,128,0); font-weight: bold; }
+.s3 { color: rgb(0,0,255); }
+.s4 { color: rgb(128,128,128); font-style: italic; }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#C0C0C0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+MainActivity.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+
+<span class="s0">package </span><span class="s1">andrezz.cajero; 
+ 
+</span><span class="s0">import </span><span class="s1">android.content.Intent; 
+</span><span class="s0">import </span><span class="s1">android.support.v7.app.ActionBarActivity; 
+</span><span class="s0">import </span><span class="s1">android.os.Bundle; 
+</span><span class="s0">import </span><span class="s1">android.view.Menu; 
+</span><span class="s0">import </span><span class="s1">android.view.MenuItem; 
+</span><span class="s0">import </span><span class="s1">android.view.View; 
+</span><span class="s0">import </span><span class="s1">android.widget.Button; 
+</span><span class="s0">import </span><span class="s1">android.widget.EditText; 
+</span><span class="s0">import </span><span class="s1">android.widget.Toast; 
+ 
+ 
+</span><span class="s0">public class </span><span class="s1">MainActivity </span><span class="s0">extends </span><span class="s1">ActionBarActivity { 
+    EditText txtClave; 
+    @Override 
+    </span><span class="s0">protected void </span><span class="s1">onCreate(Bundle savedInstanceState) { 
+        </span><span class="s0">super</span><span class="s1">.onCreate(savedInstanceState); 
+        setContentView(R.layout.activity_main); 
+        txtClave= (EditText) findViewById(R.id.txtClave); 
+ 
+    } 
+    </span><span class="s0">public void </span><span class="s1">abrirMenu(String user, Double monto){ 
+        Intent intent= </span><span class="s0">new </span><span class="s1">Intent(</span><span class="s0">this</span><span class="s1">,MenuCajero.</span><span class="s0">class</span><span class="s1">); 
+        startActivity(intent); 
+    } 
+    </span><span class="s0">public void </span><span class="s1">validar(View view){ 
+        String clave= txtClave.getText().toString(); 
+        </span><span class="s0">if</span><span class="s1">(clave.equals(</span><span class="s2">&quot;1234&quot;</span><span class="s1">)){ 
+            abrirMenu(</span><span class="s2">&quot;Usuario&quot;</span><span class="s1">,</span><span class="s3">3500.0</span><span class="s1">); 
+        }</span><span class="s0">else if</span><span class="s1">(clave.equals(</span><span class="s2">&quot;5678&quot;</span><span class="s1">)){ 
+            abrirMenu(</span><span class="s2">&quot;Usuario2&quot;</span><span class="s1">,</span><span class="s3">50.0</span><span class="s1">); 
+        }</span><span class="s0">else</span><span class="s1">{ 
+            Toast.makeText(</span><span class="s0">this</span><span class="s1">,</span><span class="s2">&quot;Clave Invalida&quot;</span><span class="s1">,Toast.LENGTH_SHORT).show(); 
+        } 
+    } 
+ 
+ 
+    @Override 
+    </span><span class="s0">public boolean </span><span class="s1">onCreateOptionsMenu(Menu menu) { 
+        </span><span class="s4">// Inflate the menu; this adds items to the action bar if it is present.</span><span class="s1"> 
+        getMenuInflater().inflate(R.menu.menu_main, menu); 
+        </span><span class="s0">return true</span><span class="s1">; 
+    } 
+ 
+    @Override 
+    </span><span class="s0">public boolean </span><span class="s1">onOptionsItemSelected(MenuItem item) { 
+        </span><span class="s4">// Handle action bar item clicks here. The action bar will</span><span class="s1"> 
+        </span><span class="s4">// automatically handle clicks on the Home/Up button, so long</span><span class="s1"> 
+        </span><span class="s4">// as you specify a parent activity in AndroidManifest.xml.</span><span class="s1"> 
+        </span><span class="s0">int </span><span class="s1">id = item.getItemId(); 
+ 
+        </span><span class="s4">//noinspection SimplifiableIfStatement</span><span class="s1"> 
+        </span><span class="s0">if </span><span class="s1">(id == R.id.action_settings) { 
+            </span><span class="s0">return true</span><span class="s1">; 
+        } 
+ 
+        </span><span class="s0">return super</span><span class="s1">.onOptionsItemSelected(item); 
+    } 
+} 
+</span></pre>
+</body>
+</html>
